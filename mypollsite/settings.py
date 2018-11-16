@@ -13,6 +13,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -23,6 +24,24 @@ SECRET_KEY = '0yj#hc5^pll+p=5n=dc9t)#4qjs5ianr#kncq*9mv6chu75yed'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+            
 
 ALLOWED_HOSTS = []
 
